@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wiom — Customer Experience Principles</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --n50:#FAF9FC;--n100:#F1EDF7;--n200:#E8E4F0;--n300:#D7D3E0;--n500:#A7A1B2;--n600:#5C5570;--n700:#665E75;--n900:#161021;
@@ -12,8 +12,8 @@
     --rd100:#FFE5E7;--rd200:#FFCCD0;--rd600:#D92130;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Noto Sans',-apple-system,sans-serif;background:var(--n50);color:var(--n900);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .pg{max-width:920px;margin:0 auto;padding:0 48px}
+  body{font-family:'Noto Sans','Noto Sans Devanagari',-apple-system,sans-serif;background:var(--n50);color:var(--n900);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .pg{max-width:960px;margin:0 auto;padding:0 48px}
   code,.mono{font-family:'DM Mono',monospace}
 
   /* Hero */
@@ -29,30 +29,58 @@
   .sd{font-size:14px;color:var(--n600);max-width:700px;margin-bottom:36px;line-height:1.65}
 
   /* Principle block */
-  .pblock{padding:32px 0;border-bottom:1px solid var(--n200)}
+  .pblock{padding:40px 0;border-bottom:1px solid var(--n200)}
   .pblock:last-of-type{border-bottom:none;padding-bottom:0}
   .pblock:first-of-type{padding-top:0}
 
-  .phead{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+  .phead{display:flex;gap:16px;align-items:center;margin-bottom:18px}
   .prn{flex-shrink:0;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;background:var(--n900);color:white}
-  .ptitle{font-size:20px;font-weight:700;letter-spacing:-0.01em;line-height:1.3;flex:1}
+  .ptitle{font-size:22px;font-weight:700;letter-spacing:-0.01em;line-height:1.3;flex:1}
+  .pweight{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;background:var(--pk600);color:white;padding:5px 12px;border-radius:100px;white-space:nowrap;letter-spacing:0.02em}
 
-  .pbelief{font-size:15px;color:var(--n900);line-height:1.6;font-weight:600;margin:0 0 14px 52px;max-width:700px}
+  .pbelief{font-size:16px;color:var(--n900);line-height:1.55;font-weight:600;margin:0 0 14px 52px;max-width:720px}
 
-  .pfilter{margin:0 0 18px 52px;background:var(--n900);color:white;border-radius:8px;padding:12px 18px;display:inline-flex;align-items:baseline;gap:14px;font-size:13px}
+  .pfilter{margin:0 0 24px 52px;background:var(--n900);color:white;border-radius:8px;padding:12px 18px;display:inline-flex;align-items:baseline;gap:14px;font-size:13px;flex-wrap:wrap}
   .pfilter .dm{color:var(--pk300);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600}
   .pfilter .q{color:white}
 
-  .pdesc{font-size:14px;color:var(--n600);line-height:1.75;margin:0 0 20px 52px;max-width:700px}
+  .pbody{margin-left:52px;max-width:760px}
 
-  .pshow{margin:0 0 0 52px;background:white;border:1px solid var(--n200);border-radius:8px;padding:18px 22px}
-  .pshow h4{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--n500);margin-bottom:12px}
-  .pshow ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
-  .pshow li{font-size:13px;line-height:1.6;color:var(--n700);padding-left:16px;position:relative}
-  .pshow li::before{content:'→';position:absolute;left:0;color:var(--n500)}
+  .psub{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pk700);margin:24px 0 10px}
+  .psub:first-child{margin-top:0}
 
-  .pavoid{margin:12px 0 0 52px;font-size:12px;line-height:1.6;color:var(--rd600);background:var(--rd100);border:1px solid var(--rd200);border-radius:8px;padding:10px 16px}
-  .pavoid strong{font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:0.08em;margin-right:8px}
+  .pdesc{font-size:14px;color:var(--n700);line-height:1.75;margin-bottom:12px}
+  .pdesc:last-child{margin-bottom:0}
+  .pdesc strong{color:var(--n900);font-weight:600}
+
+  .pquote{margin:14px 0;padding:12px 18px;background:var(--pk100);border-left:3px solid var(--pk600);border-radius:6px;font-size:14px;line-height:1.65;color:var(--pk800);font-style:italic}
+  .pquote strong{font-weight:700;font-style:normal}
+  .pquote.dq{background:var(--n900);color:white;border-left-color:var(--pk300)}
+  .pquote.dq strong{color:white}
+
+  .plist{list-style:none;padding:0;margin:0}
+  .plist li{font-size:14px;line-height:1.7;color:var(--n700);padding-left:18px;position:relative;margin-bottom:4px}
+  .plist li::before{content:'→';position:absolute;left:0;color:var(--n500)}
+
+  .pimpl{background:white;border:1px solid var(--n200);border-radius:8px;padding:20px 22px;margin-top:8px}
+  .pimpl-grid{display:grid;gap:24px 32px}
+  .pimpl-grid.cols-2{grid-template-columns:1fr 1fr}
+  .pimpl-col h5{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--n500);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--n100)}
+  .pimpl-col ul{list-style:none;padding:0}
+  .pimpl-col li{font-size:13px;line-height:1.65;color:var(--n700);padding-left:16px;position:relative;margin-bottom:5px}
+  .pimpl-col li::before{content:'→';position:absolute;left:0;color:var(--n500)}
+
+  .pavoid{margin-top:18px;font-size:12px;line-height:1.7;color:var(--rd600);background:var(--rd100);border:1px solid var(--rd200);border-radius:8px;padding:12px 16px}
+  .pavoid strong{font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:0.08em;margin-right:8px;display:inline-block;padding:2px 8px;background:var(--rd600);color:white;border-radius:100px}
+
+  /* Summary table */
+  table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--n200);border-radius:8px;overflow:hidden;font-size:13px}
+  thead th{background:white;padding:12px 16px;text-align:left;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--n600);border-bottom:1px solid var(--n200)}
+  tbody td{padding:14px 16px;border-bottom:1px solid var(--n100);vertical-align:middle;line-height:1.5}
+  tbody tr:last-child td{border-bottom:none}
+  .tpct{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:var(--pk600);white-space:nowrap}
+  .tnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:var(--n900);color:white;font-size:11px;font-weight:700;margin-right:8px;vertical-align:1px}
+  .tq{font-style:italic;color:var(--n600)}
 
   /* Weightage */
   .wbox{background:white;border:1px solid var(--n200);border-radius:8px;padding:8px 24px}
@@ -73,11 +101,12 @@
 
   @media (max-width:780px){
     .pg{padding:0 24px}
-    .pbelief,.pfilter,.pdesc,.pshow,.pavoid{margin-left:0}
-    .pshow ul{grid-template-columns:1fr}
+    .pbelief,.pfilter,.pbody{margin-left:0}
+    .pimpl-grid.cols-2{grid-template-columns:1fr}
     .wbar-row{grid-template-columns:1fr 56px;gap:8px 16px}
     .wbar-track{grid-column:1 / -1}
     .pfilter{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+    .phead{flex-wrap:wrap}
   }
 </style>
 </head>
@@ -96,119 +125,283 @@
 <div class="s">
   <div class="ey">The principles</div>
   <div class="st">Five customer beliefs Wiom optimizes for</div>
-  <div class="sd">Each principle is a belief about the customer, the question to ask when making a decision, and the behaviours that follow from it.</div>
+  <div class="sd">Each principle carries a weightage — its default power when principles conflict. Higher weight wins by default. Each block lays out the core belief, why it matters, what it means in practice, the implications across product and operations, and the anti-patterns to avoid.</div>
 
-  <!-- 1 -->
+  <!-- 1 — Financial Flexibility -->
   <div class="pblock">
     <div class="phead">
       <div class="prn">1</div>
       <div class="ptitle">Financial Flexibility Over Commercial Lock-in</div>
+      <div class="pweight">Weight 20%</div>
     </div>
-    <div class="pbelief">Customers should feel internet is within control, not a financial commitment.</div>
+    <div class="pbelief">Customers should feel internet is "within control," not a financial commitment.</div>
     <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Does the customer feel in control?</span></div>
-    <div class="pdesc">Wiom's strongest innovation is reducing the burden of fixed internet commitments. Flexibility builds trust. Recharge should feel lightweight and predictable, pause and resume should feel natural, and customers should never feel trapped.</div>
-    <div class="pshow">
-      <h4>Shows up as</h4>
-      <ul>
-        <li>Transparent recharge validity</li>
-        <li>Simple plan structures</li>
-        <li>Grace periods where possible</li>
-        <li>No hidden deductions or surprises</li>
+
+    <div class="pbody">
+      <div class="psub">Why this matters</div>
+      <div class="pdesc">Wiom's biggest innovation is not broadband. It is removing the psychological burden of fixed monthly internet.</div>
+      <div class="pquote">"जितने दिन रिचार्ज, उतने दिन नेट" — fundamentally a control promise.</div>
+      <div class="pdesc">Most lower- and middle-income households optimize cash flow weekly or daily. The moment Wiom behaves like a traditional ISP — forced plans, hidden charges, lock-ins, penalties, forced autopay — trust breaks.</div>
+
+      <div class="psub">What this principle means</div>
+      <ul class="plist">
+        <li>Flexibility wins over maximizing short-term revenue</li>
+        <li>Pause and resume should feel natural</li>
+        <li>Recharge should feel lightweight</li>
+        <li>Customer should never feel trapped</li>
       </ul>
+
+      <div class="psub">Product implications</div>
+      <div class="pimpl">
+        <div class="pimpl-grid cols-2">
+          <div class="pimpl-col">
+            <h5>Recharge &amp; plans</h5>
+            <ul>
+              <li>Recharge validity transparency everywhere</li>
+              <li>Daily and weekly packs as first-class citizens</li>
+              <li>Grace periods during recharge expiry</li>
+              <li>No surprise deductions</li>
+            </ul>
+          </div>
+          <div class="pimpl-col">
+            <h5>Control surfaces</h5>
+            <ul>
+              <li>Easy pause and restart</li>
+              <li>"Low balance / ending soon" reduces anxiety, not pushes fear</li>
+              <li>Predictable behaviour on expiry</li>
+              <li>Customer-led actions, not forced flows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pavoid"><strong>Avoid</strong>Dark patterns for subscriptions, aggressive autopay defaults, punishment for low-frequency usage, complex plan structures.</div>
     </div>
-    <div class="pavoid"><strong>Avoid</strong>dark patterns, aggressive lock-ins, confusing pricing, forced autopay behaviours.</div>
   </div>
 
-  <!-- 2 -->
+  <!-- 2 — Reliability -->
   <div class="pblock">
     <div class="phead">
       <div class="prn">2</div>
       <div class="ptitle">Reliability Is More Important Than Speed</div>
+      <div class="pweight">Weight 25%</div>
     </div>
-    <div class="pbelief">Stable internet matters more than peak performance.</div>
+    <div class="pbelief">For Wiom users, stable internet is more valuable than "fastest internet."</div>
     <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Can the customer depend on it?</span></div>
-    <div class="pdesc">Most customers compare Wiom against unstable alternatives and uncertainty, not premium fiber benchmarks. Dependability compounds harder than feature perception. Communicate outages honestly and fix acknowledgment speed before cosmetic UX.</div>
-    <div class="pshow">
-      <h4>Shows up as</h4>
-      <ul>
-        <li>Strong repair ownership</li>
-        <li>Visible ticket progress</li>
-        <li>Preventive monitoring</li>
-        <li>Reliable activations and recharges</li>
-      </ul>
+
+    <div class="pbody">
+      <div class="psub">Why this matters</div>
+      <div class="pdesc">The target user is not benchmarking against premium fiber. They are benchmarking against mobile data exhaustion, unstable local broadband, uncertainty, and interrupted work or study.</div>
+      <div class="pquote">A stable 20 Mbps connection builds more trust than an unstable 100 Mbps.</div>
+      <div class="pdesc">Complaint patterns also show that unresolved downtime destroys trust disproportionately.</div>
+
+      <div class="psub">What this principle means</div>
+      <div class="pdesc">Every operational decision should ask: <strong>"Will this reduce uncertainty and interruptions?"</strong></div>
+
+      <div class="psub">Implications</div>
+      <div class="pimpl">
+        <div class="pimpl-grid cols-2">
+          <div class="pimpl-col">
+            <h5>Product &amp; CX</h5>
+            <ul>
+              <li>Outage communication over silence</li>
+              <li>ETA honesty over fake optimism</li>
+              <li>Visible ticket progress</li>
+              <li>Predictable recharge activation</li>
+              <li>Fast issue acknowledgement</li>
+              <li>Smart troubleshooting before escalation</li>
+              <li>Stability as an internal north-star metric</li>
+            </ul>
+          </div>
+          <div class="pimpl-col">
+            <h5>Operational</h5>
+            <ul>
+              <li>Local uptime visibility</li>
+              <li>Preventive detection</li>
+              <li>Strong partner accountability</li>
+              <li>Repair SLA transparency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pavoid"><strong>Avoid</strong>Marketing peak speeds aggressively, over-promising, fake "resolved soon" messaging, silent failures.</div>
     </div>
-    <div class="pavoid"><strong>Avoid</strong>over-promising speeds, fake ETAs, silence during downtime, unreliable activations.</div>
   </div>
 
-  <!-- 3 -->
+  <!-- 3 — Reduce Uncertainty -->
   <div class="pblock">
     <div class="phead">
       <div class="prn">3</div>
       <div class="ptitle">Reduce Customer Uncertainty at Every Step</div>
+      <div class="pweight">Weight 30%</div>
     </div>
     <div class="pbelief">Confusion feels more painful than delay.</div>
     <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Does the customer know what's happening?</span></div>
-    <div class="pdesc">Customers should always know what happened, what happens next, who owns the issue, and by when. This is the primary trust-building layer across support, recharge, and service journeys. Clear journey states beat polished UI.</div>
-    <div class="pshow">
-      <h4>Shows up as</h4>
-      <ul>
-        <li>Complaint tracking visibility</li>
-        <li>Technician arrival transparency</li>
-        <li>Clear recharge confirmations</li>
-        <li>Simple troubleshooting guidance</li>
+
+    <div class="pbody">
+      <div class="psub">Why this matters</div>
+      <div class="pdesc">Many Wiom customers are first-time or low-confidence broadband users. Broadband systems are naturally invisible — backend issue, recharge state, router issue, technician delay, complaint progress — and when users don't know <em>what is happening</em>, trust collapses quickly.</div>
+      <div class="pdesc">This is especially critical in complaint flows and CSP.</div>
+
+      <div class="psub">What this principle means</div>
+      <div class="pdesc">Every journey should answer four questions:</div>
+      <ul class="plist">
+        <li>What happened?</li>
+        <li>What happens next?</li>
+        <li>By when?</li>
+        <li>Who owns it?</li>
       </ul>
+
+      <div class="psub">Implications</div>
+      <div class="pimpl">
+        <div class="pimpl-grid cols-2">
+          <div class="pimpl-col">
+            <h5>Visible state</h5>
+            <ul>
+              <li>Human-readable status</li>
+              <li>Time expectations on every step</li>
+              <li>Ticket and installation tracking</li>
+              <li>Recharge confirmation clarity</li>
+            </ul>
+          </div>
+          <div class="pimpl-col">
+            <h5>Journey recovery</h5>
+            <ul>
+              <li>Failure recovery messaging</li>
+              <li>Technician arrival transparency</li>
+              <li>Visible ownership at each stage</li>
+              <li>Never leave users in a dead-end state</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pquote dq"><strong>UX principle —</strong> never leave users in a dead-end state.</div>
+
+      <div class="pavoid"><strong>Avoid</strong>"Please wait", infinite loading ambiguity, no ownership, no callback expectation, generic complaint registration.</div>
     </div>
-    <div class="pavoid"><strong>Avoid</strong>generic responses, invisible progress, unclear timelines, "please wait" dead ends.</div>
   </div>
 
-  <!-- 4 -->
+  <!-- 4 — Human Trust -->
   <div class="pblock">
     <div class="phead">
       <div class="prn">4</div>
       <div class="ptitle">Human Trust Beats Corporate Distance</div>
+      <div class="pweight">Weight 15%</div>
     </div>
-    <div class="pbelief">Wiom should feel like a helpful neighborhood utility.</div>
+    <div class="pbelief">Wiom should feel like a helpful neighborhood utility, not a telecom giant.</div>
     <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Does this feel human and approachable?</span></div>
-    <div class="pdesc">Trust is built through approachable language, local familiarity, and respectful interactions. Hindi-first thinking where relevant, technicians as trust ambassadors, empathy during failures. Important for emotional connection and partner-led credibility at scale.</div>
-    <div class="pshow">
-      <h4>Shows up as</h4>
-      <ul>
-        <li>Simple, respectful copy</li>
-        <li>Reduced telecom jargon</li>
-        <li>Visible local support ownership</li>
-        <li>Community-oriented behaviour</li>
-      </ul>
+
+    <div class="pbody">
+      <div class="psub">Why this matters</div>
+      <div class="pdesc">Wiom's moat is partly operational, but emotionally it is local trust, approachable language, human support, and familiarity. The brand positioning already reflects this "People's Network" orientation.</div>
+      <div class="pquote">"Wiom understands people like us." — the strongest advantage versus large ISPs.</div>
+
+      <div class="psub">What this principle means</div>
+      <div class="pdesc">Interactions should feel respectful, conversational, non-intimidating, empathetic, and simple. Especially in Hindi-first environments. <strong>The tone itself is product.</strong></div>
+
+      <div class="psub">Implications</div>
+      <div class="pimpl">
+        <div class="pimpl-grid cols-2">
+          <div class="pimpl-col">
+            <h5>Product &amp; CX</h5>
+            <ul>
+              <li>Hindi-first thinking</li>
+              <li>Conversational copy</li>
+              <li>Local technician identity visibility</li>
+              <li>Simple words instead of telecom jargon</li>
+              <li>Friendly resolution language</li>
+              <li>Reassurance during failures</li>
+            </ul>
+          </div>
+          <div class="pimpl-col">
+            <h5>Operational</h5>
+            <ul>
+              <li>Local partners are brand ambassadors, not just installers</li>
+              <li>Technician behaviour is customer experience</li>
+              <li>Community trust loops matter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pavoid"><strong>Avoid</strong>Corporate or legalistic tone, technical jargon, over-automation without reassurance, robotic support.</div>
     </div>
-    <div class="pavoid"><strong>Avoid</strong>robotic communication, corporate or legalistic tone, over-automation without reassurance.</div>
   </div>
 
-  <!-- 5 -->
+  <!-- 5 — Enabling, Not Transactional -->
   <div class="pblock">
     <div class="phead">
       <div class="prn">5</div>
       <div class="ptitle">Internet Should Feel Enabling, Not Transactional</div>
+      <div class="pweight">Weight 10%</div>
     </div>
-    <div class="pbelief">Customers are not buying data. They are protecting continuity of life.</div>
-    <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Are we enabling life continuity?</span></div>
-    <div class="pdesc">Wiom enables education, entertainment, work, communication, and aspiration. Treat recharge as continuity, not billing. Build recovery experiences thoughtfully. The emotional layer shapes long-term brand perception more than any single feature.</div>
-    <div class="pshow">
-      <h4>Shows up as</h4>
-      <ul>
-        <li>Thoughtful recharge reminders</li>
-        <li>Better failed-payment recovery</li>
-        <li>Emergency continuity thinking</li>
-        <li>Family-oriented communication framing</li>
-      </ul>
+    <div class="pbelief">Wiom is not selling GBs. It is enabling continuity of life.</div>
+    <div class="pfilter"><span class="dm">Decision filter</span><span class="q">Are we supporting life continuity, not just selling data?</span></div>
+
+    <div class="pbody">
+      <div class="psub">Why this matters</div>
+      <div class="pdesc">The emotional job-to-be-done is concrete and human: kids studying, entertainment, work-from-home, creator uploads, WhatsApp family calls, online earning.</div>
+      <div class="pquote">The user is not buying bandwidth. They are protecting continuity. This is where delight emerges.</div>
+
+      <div class="psub">What this principle means</div>
+      <div class="pdesc">Decisions should optimize <strong>confidence, continuity, dignity, and aspiration</strong> — not just successful transactions.</div>
+
+      <div class="psub">Product implications</div>
+      <div class="pimpl">
+        <div class="pimpl-grid cols-2">
+          <div class="pimpl-col">
+            <h5>Continuity surfaces</h5>
+            <ul>
+              <li>Recharge reminders framed as continuity</li>
+              <li>Smart recovery after failed recharge</li>
+              <li>Temporary emergency access possibilities</li>
+              <li>"Net stopped during important work" sensitivity</li>
+            </ul>
+          </div>
+          <div class="pimpl-col">
+            <h5>Tone &amp; framing</h5>
+            <ul>
+              <li>Usage-aware nudges</li>
+              <li>Family-oriented framing</li>
+              <li>Aspirational, not transactional</li>
+              <li>Dignified, not discount-led</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pquote dq"><strong>Brand —</strong> Wiom should feel like "the internet that understands real life," not "cheap broadband."</div>
+
+      <div class="pavoid"><strong>Avoid</strong>Pure discount positioning, over-indexing on affordability alone, treating users as low-ARPU customers instead of high-trust households.</div>
     </div>
-    <div class="pavoid"><strong>Avoid</strong>pure discount positioning, transactional thinking, treating customers as low-ARPU users.</div>
   </div>
+</div>
+
+<!-- SUMMARY TABLE -->
+<div class="s">
+  <div class="ey">The five together</div>
+  <div class="st">Short version — at a glance</div>
+  <div class="sd">A scannable recap. One question per principle, in weight order.</div>
+
+  <table>
+    <thead><tr><th style="width:60%">Principle</th><th>Core question</th><th style="width:80px">Weight</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tnum">3</span><strong>Reduce Customer Uncertainty at Every Step</strong></td><td class="tq">"Does the customer know what's happening?"</td><td class="tpct">30%</td></tr>
+      <tr><td><span class="tnum">2</span><strong>Reliability Is More Important Than Speed</strong></td><td class="tq">"Can the customer depend on it?"</td><td class="tpct">25%</td></tr>
+      <tr><td><span class="tnum">1</span><strong>Financial Flexibility Over Commercial Lock-in</strong></td><td class="tq">"Does the customer feel in control?"</td><td class="tpct">20%</td></tr>
+      <tr><td><span class="tnum">4</span><strong>Human Trust Beats Corporate Distance</strong></td><td class="tq">"Does this feel human and approachable?"</td><td class="tpct">15%</td></tr>
+      <tr><td><span class="tnum">5</span><strong>Internet Should Feel Enabling, Not Transactional</strong></td><td class="tq">"Are we supporting life continuity, not just selling data?"</td><td class="tpct">10%</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- WEIGHTAGE -->
 <div class="s">
   <div class="ey">Decision weightage</div>
   <div class="st">How the principles rank when they conflict</div>
-  <div class="sd">Not every principle carries equal power in every decision. When two principles point in different directions, the higher-weighted one wins by default. Uncertainty and reliability create the strongest trust reactions — internet failure directly disrupts work, payments, and study. Financial flexibility is a category differentiator, but its value weakens if reliability and clarity break.</div>
+  <div class="sd">Not every principle carries equal power in every decision. When two principles point in different directions, the higher-weighted one wins by default. Uncertainty and reliability create the strongest trust reactions — internet failure directly disrupts work, payments, and study. Financial flexibility is a category differentiator, but its value weakens if reliability and clarity break. The emotional and brand-oriented principles become more powerful as the operational foundation matures.</div>
 
   <div class="wbox">
     <div class="wbar-row">
